@@ -2,23 +2,33 @@
 
 CLASS Pessoa
 
-  DATA Nome
-  DATA SobreNome
-  DATA Nascimento
-  DATA Signo
-  DATA Altura
-  DATA Peso
-
-  METHOD New( Nome, SobreNome, Signo, Altura, Peso )
+  DATA vNome, vSobreNome, vNascimento, vSigno, vAltura, vPeso
+  METHOD Novo()
+  METHOD EmTela()
 
 ENDCLASS
 
-METHOD New( Nome, Sobrenome, Signo, Altura, Peso )
+METHOD Novo()
 
-::Nome := Nome
-::SobreNome := SobreNome
-::Signo := Signo
-::Altura := Altura
-::Peso := Peso
+  CLS
+  ACCEPT "Qual seu Nome? " TO ::vNome
+  ACCEPT "Qual seu Sobrenome? " TO ::vSobrenome
+  ACCEPT "Qual seu Data de Nascimento? (Coloque DD/MM/AAAA)  " TO ::vNascimento
+  ACCEPT "Qual seu Signo? " TO ::vSigno
+  ACCEPT "Qual seu Altura? " TO ::vAltura
+  ACCEPT "Qual seu Peso? " TO ::vPeso
+  CLS
 
-RETURN Self
+  ::vNascimento := CTOD(::vNascimento)
+
+RETURN SELF
+
+METHOD EmTela()
+
+? "Seu nome é ", ::vNome,"e seu sobrenome é", ::vSobrenome
+? "Seu signo é: ", ::vSigno
+? "Sua altura é: ", ::vAltura, "centimentros"
+? "Você pesa: ", ::vPeso, "Kg"
+? "Sua idade é de: ", ::vNascimento:= INT((date()- ::vNascimento)/365), "Anos"
+
+RETURN
