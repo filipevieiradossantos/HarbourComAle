@@ -8,3 +8,4 @@ Está dividido em pastas com as aulas/atividas que estão sendo propostas, lembr
 
 - *Aula 1* - Metodo "New" utilizado na Classe Pessoa
 - *Aula 2* - Metodo "New" utilizado na Classe Pessoa, solicitando dados de entrada, metodo para apresentar em tela as informações
+- *Aula 3* - Projeto conta corrente
