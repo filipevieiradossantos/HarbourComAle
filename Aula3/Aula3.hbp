@@ -1,0 +1,26 @@
+-oContaCorrente
+
+-inc
+-workdir=objs
+
+# Libs
+-lhbodbc
+-lodbc32
+-lhbwin
+-lxhb
+-lhbtip
+-lhbct
+-lhbmisc
+-lhbziparc
+-lminizip
+-lhbmzip
+-lhbtip
+-lhbnf
+-lhbxpp
+
+# Principal
+CC.prg
+
+# Objetos / Classes
+Ope.prg
+Func.prg
